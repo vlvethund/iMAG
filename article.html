@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/54919de5bd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <title>Minimalist In Form, Forgo Encourages</title>
+    <script>
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $(".sub_header").outerHeight();
+        var navbarHeight2 = $(".header").outerHeight();
+
+        $(window).ready(function () {
+            $('.sub_header').css('visibility', 'hidden');
+        })
+
+        $(window).scroll(function (event) {
+            didScroll = true;
+        });
+        setInterval(function () {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+        function hasScrolled() {
+            $('.sub_header').css('visibility', 'visible');
+            var st = $(this).scrollTop();
+            if (Math.abs(lastScrollTop - st) <= delta) return;
+            if (st > lastScrollTop && st > navbarHeight) {
+                $(".sub_header").removeClass("nav-down").addClass("nav-up");
+                $("header").removeClass("nav-down2").addClass("nav-up2");
+                $(".sub_header").addClass("sub_hidden");
+
+            } else {
+                if (st + $(window).height() < $(document).height()) {
+                    $(".sub_header").removeClass("nav-up").addClass("nav-down");
+                    $("header").removeClass("nav-up2").addClass("nav-down2");
+                }
+            }
+            lastScrollTop = st;
+        }
+        // function hasScrolled() {
+        //     var st = $(this).scrollTop();
+        //     if (Math.abs(lastScrollTop - st) <= delta) return;
+        //     if (st > lastScrollTop && st > navbarHeight) {
+        //         $("header").removeClass("nav-down2").addClass("nav-up2");
+        //     } else {
+        //         if (st + $(window).height() < $(document).height()) {
+        //             $("header").removeClass("nav-up2").addClass("nav-down2");
+        //         }
+        //     }
+        //     lastScrollTop = st;
+        // }
+    </script>
+</head>
+
+<body>
+    <header>
+        <i class="fas fa-bars"></i>
+        <span><a href="">iMAG</a></span>
+        <i class="fas fa-search"></i>
+    </header>
+    <div class="sub_header">
+        <span><a href="">IT</a></span>
+        <span><a href="">SPACE</a></span>
+        <span><a href="">ABOUT US</a></span>
+    </div>
+    <main class="main">
+        <div class="bg_image">
+            <div class="first_div">
+                <div class="first_image"></div>
+                <div class="first_text">
+                    <ul class="main_dp">
+                        <li class="design">
+                            <a href="https://www.ignant.com/category/design/">DESIGN </a>
+                        </li>
+                        <li> · </li>
+                        <li class="product">
+                            <a href="https://www.ignant.com/category/design/product/"> PRODUCT</a>
+                        </li>
+                    </ul>
+                    <div class="first_article_title">
+                        <div class="line1">Minimalist In Form,</div>
+                        <div class="line2"> Forgo Encourages The</div>
+                        <div class="line3">Sustainable Future Of</div>
+                        <div class="line4">Products</div>
+                    </div>
+                </div>
+            </div>
+            <div class="second_div">
+                <div class="info_list">
+                    <dl>
+                        <dt class="info_list-name">NAME</dt>
+                        <dd>
+                            <a href="https://www.ignant.com/creator/forgo/a">Forgo</a>
+                            <a href="https://www.forgo.se/"><i class="fas fa-globe"></i></a>
+                            <a href="https://www.instagram.com/forgoessentials/"><i class="fab fa-instagram"></i></a>
+                        </dd>
+                        <dt class="info_list-photographer">PHOTOGRAPHER</dt>
+                        <dd><a href="https://www.ignant.com/photographer/forgo/"> Forgo</a></dd>
+                        <dt class="ingo_list-words">WORDS</dt>
+                        <dd><a href="https://www.ignant.com/author/emily-grundon/">Emily Grundon</a></dd>
+                    </dl>
+                </div>
+                <div class="section">
+                    <div class="first_para">
+                        <p>Stockholm-based multi-disciplinary studio Form Us With Love has created
+                            ‘Forgo’—a new hand wash product that seeks to encourage mindful
+                            consumerism and reduce plastic waste.</p>
+                    </div>
+                    <div class="second_para">
+                        <p>The innovative studio has designed a sustainable alternative to liquid soap based upon the
+                            principles of minimizing the environmental impact of products. Consisting of a single glass
+                            bottle and refillable sachets of soap powder, the inventive creation requires only one
+                            additional ingredient: water. Created to combat the issue of single-use plastics, the team
+                            has
+                            worked closely with a specialist cosmetics lab based in Montreal to create their soap powder
+                            that, when added to water, turns into a luxurious foaming hand wash. Currently, the hand
+                            wash is
+                            available in a neutral scent and two fragrances that are also created from sustainable
+                            sources.
+                            Further reducing the need for raw materials, the fragrances are sourced from waste
+                            materials—the
+                            ‘Woody’ scent is distilled from timber yard scraps, and the ‘Citrus’ scent is distilled from
+                            leftover peels and pulp from organic juicing plants in the Caribbean. With plans to increase
+                            the
+                            range to include other daily essentials, ‘Forgo’ symbolizes the potential for creating
+                            sustainable, innovative products as the much-needed encouragement of positive environmental
+                            change.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="third_div">
+                <div class="second_image"><img src="images/second_img.jpg">
+                    <div class="source_of_image">Image © Jonas Lindström Studio</div>
+                </div>
+
+            </div>
+            <div class="forth_div">
+                <div class="third_image"><img src="images/third_img.jpg">
+                    <div class="source_of_image">Image © Jonas Lindström Studio</div>
+                </div>
+                <p>All images © Jonas Lindström Studio, Anna Heck & Yujin Jiang, and Form Us With Love</p>
+            </div>
+            <div class="more_article">
+                <div class="continue_reading">CONTINUE READING</div>
+                <div class="related_posts">Related Posts</div>
+                <div class="posts">
+                    <div class="first_posts">
+                        <div class="first_posts_img"><img src="images/fisrt_post.jpg"></div>
+                        <div>
+                            <ul class="first_dp">
+                                <li class="design">
+                                    <a href="https://www.ignant.com/category/design/">DESIGN</a>
+                                </li>
+                                <li> · </li>
+                                <li class="product">
+                                    <a href="https://www.ignant.com/category/design/product/">PRODUCT</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="first_post_title">
+                            <p>The New Wave Collection By Sarah Ellison</p>
+                        </div>
+                    </div>
+                    <div class="second_posts">
+                        <div class="second_posts_img"><img src="images/second_post.jpg" alt=""></div>
+                        <div>
+                            <ul class="second_dp">
+                                <li class="design">
+                                    <a href="https://www.ignant.com/category/design/">DESIGN</a>
+                                </li>
+                                <li> · </li>
+                                <li class="product">
+                                    <a href="https://www.ignant.com/category/design/product/">PRODUCT</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="second_post_title">
+                            <p>Not bamboo lamp</p>
+                        </div>
+                    </div>
+                    <div class="third_posts">
+                        <div class="third_posts_img"><img src="images/third_post.jpg" alt=""></div>
+                        <div>
+                            <ul class="sthird_dp">
+                                <li class="design">
+                                    <a href="https://www.ignant.com/category/design/">DESIGN</a>
+                                </li>
+                                <li> · </li>
+                                <li class="product">
+                                    <a href="https://www.ignant.com/category/design/product/">PRODUCT</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="third_post_title">
+                            <p>Flat Life</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="categories">
+                <h3>Other Categories in Design</h3>
+                <ul class="categories_list">
+                    <li>IT</li>
+                    <li>TECHNOLOGY</li>
+                </ul>
+            </div>
+            <div class="latest_articles">
+                <h5>LATEST ARTICLES</h5>
+                <div class="latest_articles-first">
+                    <div class="latest_articles-first_img"><img src="images/article01.jpg"></div>
+                    <div class="latest_articles-fisrt_article">
+                        <ul class="latest_articles-first_link">
+                            <li class="art">
+                                <a href="https://www.ignant.com/category/art/">ART</a>
+                            </li>
+                            <li> · </li>
+                            <li class="exhibition">
+                                <a href="https://www.ignant.com/category/art/exhibition/">EXHIBITION</a>
+                            </li>
+                        </ul>
+                        <div class="latest_articles_title">
+                            <a
+                                href="https://www.ignant.com/2020/07/08/daniel-steegmann-mangrane-questions-human-perception-in-fog-dog/">
+                                <p> Daniel Steegmann Mangrané Questions Human Perception In Fog Dog
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest_articles-second">
+                    <div class="latest_articles-second_img"><img src="images/article02.jpg"></div>
+                    <div class="latest_articles-second_article">
+                        <ul class="latest_articles-second_link">
+                            <li class="design">
+                                <a href="https://www.ignant.com/category/design/">DESIGN</a>
+                            </li>
+                            <li> · </li>
+                            <li class="product">
+                                <a href="https://www.ignant.com/category/design/product/">PRODUCT</a>
+                            </li>
+                        </ul>
+                        <a
+                            href="https://www.ignant.com/2020/07/07/minimalist-in-form-forgo-encourages-the-sustainable-future-of-products/">
+                            <p>Minimalist In Form, Forgo Encourages The Sustainable Future Of Products</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="latest_articles-third">
+                    <div class="latest_articles-third_img"><img src="images/article03.jpg"></div>
+                    <div class="latest_articles-third_article">
+                        <ul class="latest_articles-third_link">
+                            <li class="photography">
+                                <a href="https://www.ignant.com/category/photography/">PHOTOGRAPHY</a>
+                            </li>
+                            <li> · </li>
+                            <li class="conceptual">
+                                <a href="https://www.ignant.com/category/photography/conceptual/">CONCEPTUAL</a>
+                            </li>
+                        </ul>
+                        <a
+                            href="https://www.ignant.com/2020/07/06/the-intimacy-of-abnormality-the-photography-of-can-dagarslani-and-sophie-bogdan/">
+                            <p>The Intimacy Of Abnormality: The Photography Of Can Dagarslani And Sophie Bogdan</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--bg_image-->
+    </main>
+    <footer>
+        <div class="col">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-square"></i>
+        </div>
+        <div class="col">
+            <span>CONTACT</span>
+            <span>PRODUCTION</span>
+            <span>PRIVATE POLICY</span>
+            <span>IMPRINT</span>
+        </div>
+    </footer>
+</body>
+
+</html>
