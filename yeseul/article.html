@@ -57,6 +57,139 @@
         //     }
         //     lastScrollTop = st;
         // }
+       
+     function isElementUnderBottom(elem, triggerDiff) {
+    const { top } = elem.getBoundingClientRect();
+    const { innerHeight } = window;
+    return top > innerHeight + (triggerDiff || 0);
+}
+
+function handleScroll() {
+  var elems = document.querySelectorAll('.first_para');
+  elems.forEach(elem => {
+    if (isElementUnderBottom(elem, -10)) {
+      elem.style.opacity = "0";
+      elem.style.transform = 'translateY(200px)';
+
+    } else {
+      elem.style.opacity = "1";
+ elem.style.transform = 'translateY(0px)';
+ elem.style.transition = '1s';
+
+    }
+  })
+
+  var elems = document.querySelectorAll('.info_list');
+  elems.forEach(elem => {
+    if (isElementUnderBottom(elem, -10)) {
+      elem.style.opacity = "0";
+      elem.style.transform = 'translateY(200px)';
+
+    } else {
+      elem.style.opacity = "1";
+ elem.style.transform = 'translateY(0px)';
+ elem.style.transition = '1s';
+
+    }
+  })
+
+
+
+  var elems = document.querySelectorAll('.second_para');
+  elems.forEach(elem => {
+    if (isElementUnderBottom(elem, -10)) {
+      elem.style.opacity = "0";
+      elem.style.transform = 'translateY(200px)';
+      
+
+    } else {
+      elem.style.opacity = "1";
+ elem.style.transform = 'translateY(0px)';
+ elem.style.transition = '1s';
+
+    }
+  })
+
+  var elems = document.querySelectorAll('.continue_reading');
+  elems.forEach(elem => {
+    if (isElementUnderBottom(elem, -10)) {
+      elem.style.opacity = "0";
+      elem.style.transform = 'translateY(200px)';
+
+    } else {
+      elem.style.opacity = "1";
+ elem.style.transform = 'translateY(0px)';
+ elem.style.transition = '1s';
+
+    }
+  })
+
+
+var elems = document.querySelectorAll('.related_posts');
+  elems.forEach(elem => {
+    if (isElementUnderBottom(elem, -10)) {
+      elem.style.opacity = "0";
+      elem.style.transform = 'translateY(200px)';
+
+    } else {
+      elem.style.opacity = "1";
+ elem.style.transform = 'translateY(0px)';
+ elem.style.transition = '1s';
+
+    }
+  })
+
+  var elems = document.querySelectorAll('.posts');
+  elems.forEach(elem => {
+    if (isElementUnderBottom(elem, -10)) {
+      elem.style.opacity = "0";
+      elem.style.transform = 'translateY(200px)';
+
+    } else {
+      elem.style.opacity = "1";
+ elem.style.transform = 'translateY(0px)';
+ elem.style.transition = '1s';
+
+    }
+  })
+
+
+  var elems = document.querySelectorAll('.categories');
+  elems.forEach(elem => {
+    if (isElementUnderBottom(elem, -10)) {
+      elem.style.opacity = "0";
+      elem.style.transform = 'translateY(200px)';
+
+    } else {
+      elem.style.opacity = "1";
+ elem.style.transform = 'translateY(0px)';
+ elem.style.transition = '1s';
+
+    }
+  })
+
+
+  var elems = document.querySelectorAll('.latest_articles');
+  elems.forEach(elem => {
+    if (isElementUnderBottom(elem, -10)) {
+      elem.style.opacity = "0";
+      elem.style.transform = 'translateY(200px)';
+
+    } else {
+      elem.style.opacity = "1";
+ elem.style.transform = 'translateY(0px)';
+ elem.style.transition = '1s';
+
+    }
+  })
+  }
+
+
+window.addEventListener('scroll', handleScroll);  
+
+
+
+
     </script>
 </head>
 
@@ -150,7 +283,7 @@
             </div>
             <div class="more_article">
                 <div class="continue_reading">CONTINUE READING</div>
-                <div class="related_posts">Related Posts</div>
+                <div class="related_posts">Related Posts</div>   
                 <div class="posts">
                     <div class="first_posts">
                         <div class="first_posts_img"><img src="images/fisrt_post.jpg"></div>
@@ -212,7 +345,7 @@
                     <li>TECHNOLOGY</li>
                 </ul>
             </div>
-            <div class="latest_articles">
+            <div class="latest_articles"><!--여기까지 스크롤 작업-->
                 <h5>LATEST ARTICLES</h5>
                 <div class="latest_articles-first">
                     <div class="latest_articles-first_img"><img src="images/article01.jpg"></div>

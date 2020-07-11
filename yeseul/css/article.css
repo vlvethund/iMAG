@@ -75,6 +75,7 @@ header a{
     min-height: 680vh;
   }
 
+  
   .first_div{
       display: flex;
   }
@@ -123,6 +124,9 @@ header a{
       display: flex;
       text-align: center;
       margin-top: 90px;
+  }
+  .second_para{
+    transition: opacity 1s;
   }
 
   .second_div .info_list {
@@ -197,6 +201,9 @@ header a{
       font-size: 15px;
       line-height: 250%;
       text-align: left;
+  }
+  .second_image{
+    transition:  opacity 1s;
   }
 
 .third_div{
